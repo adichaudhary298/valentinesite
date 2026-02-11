@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hug Day 🤗</title>
+    <link rel="stylesheet" href="style_week.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <a href="dashboard.html" class="back-btn">⬅ Back to Week</a>
+        <h1 class="page-header">Happy Hug Day! 🤗</h1>
+
+        <div class="photo-frame">
+            <img id="day-photo" src="assets/hug_day.png" alt="Hug Day Memory">
+            <div class="photo-placeholder-text">Drop your photo here as 'hug_day.jpg'</div>
+        </div>
+
+        <div class="content-area">
+            <div class="photo-frame"
+                style="border: none; box-shadow: none; background: transparent; transform: rotate(0deg);">
+                <img id="hug-img" src="assets/hug_day.png" alt="Hug"
+                    style="border-radius: 50%; width: 200px; height: 200px; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+            </div>
+
+            <p id="hug-message" class="hidden" style="font-size: 1.5rem; color: #ff0a54; margin-top: 20px;">Sending you
+                a giant hug! 🤗</p>
+
+            <button class="interactive-btn" onclick="giveHug()">Send a Hug</button>
+        </div>
+    </div>
+    <script src="script_week.js"></script>
+    <script>
+        loadPhoto('day-photo', 'hug_day.jpg', 'assets/hug_day.png');
+        // Re-use the same image for interaction if needed, or specific one
+        loadPhoto('hug-img', 'hug_day.jpg', 'assets/hug_day.png');
+    </script>
+</body>
+
+</html>

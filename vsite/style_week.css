@@ -1,0 +1,256 @@
+:root {
+    --bg-color: #ffe6e6;
+    --card-bg: #fff0f3;
+    --text-color: #590d22;
+    --accent-color: #ff4d6d;
+    --hover-color: #ff8fa3;
+    --font-heading: 'Indie Flower', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dashboard Styles */
+.week-container {
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: #ff0a54;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.day-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 77, 109, 0.15);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.day-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 77, 109, 0.25);
+    background: var(--card-bg);
+}
+
+.date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #ff8fa3;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.day-card:hover .icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.label {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.final-day {
+    grid-column: 1 / -1;
+    /* Span full width on smaller screens if possible, or visually distinct */
+    background: linear-gradient(135deg, #ff4d6d, #ff0a54);
+    color: white;
+}
+
+.final-day .date,
+.final-day .label,
+.final-day .icon {
+    color: white;
+}
+
+.final-day:hover {
+    background: linear-gradient(135deg, #ff2a55, #d90429);
+}
+
+/* Individual Page Styles */
+.page-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.back-btn:hover {
+    color: #d90429;
+}
+
+.page-header {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.content-area {
+    margin: 2rem 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interactive-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: var(--font-body);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+    margin-top: 1rem;
+}
+
+.interactive-btn:hover {
+    transform: scale(1.05);
+    background-color: #ff0a54;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.visible {
+    display: block;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Specific Day Styles */
+.rose-container img,
+.couple-photo img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.promise-list {
+    text-align: left;
+    background: #fff8f9;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px dashed #ffccd5;
+}
+
+.promise-item {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom Photo Placeholder */
+.photo-frame {
+    width: 300px;
+    height: 300px;
+    /* Square by default */
+    background-color: #eee;
+    margin: 20px auto;
+    border: 10px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder-text {
+    position: absolute;
+    color: #888;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+}

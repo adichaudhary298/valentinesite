@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Day 🍫</title>
+    <link rel="stylesheet" href="style_week.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <a href="dashboard.html" class="back-btn">⬅ Back to Week</a>
+        <h1 class="page-header">Happy Chocolate Day! 🍫</h1>
+
+        <div class="content-area">
+            <div id="gift-box" style="cursor: pointer; font-size: 100px;" onclick="revealGift()">🎁</div>
+
+            <div id="joyful-content" class="hidden">
+                <div class="photo-frame">
+                    <img id="day-photo" src="assets/chocolate_day.png" alt="Chocolate Day Memory">
+                    <div class="photo-placeholder-text">Drop your photo here as 'chocolate_day.jpg'</div>
+                </div>
+                <p>Life with you is sweeter than any chocolate!</p>
+            </div>
+
+            <p>Tap the gift to unwrap!</p>
+        </div>
+    </div>
+    <script src="script_week.js"></script>
+    <script>
+        loadPhoto('day-photo', 'chocolate_day.jpg', 'assets/chocolate_day.png');
+    </script>
+</body>
+
+</html>

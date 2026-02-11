@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propose Day 💍</title>
+    <link rel="stylesheet" href="style_week.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <a href="dashboard.html" class="back-btn">⬅ Back to Week</a>
+        <h1 class="page-header">Happy Propose Day! 💍</h1>
+
+        <div class="photo-frame">
+            <img id="day-photo" src="assets/propose_day.png" alt="Propose Day Memory">
+            <div class="photo-placeholder-text">Drop your photo here as 'propose_day.jpg'</div>
+        </div>
+
+        <div class="content-area">
+            <p>I don't need a special day to say this, but...</p>
+            <p>You are the best thing that ever happened to me.</p>
+            <p>Will you stay by my side forever?</p>
+        </div>
+
+        <button class="interactive-btn" onclick="alert('Yay! ❤️')">Say Yes!</button>
+    </div>
+    <script src="script_week.js"></script>
+    <script>
+        loadPhoto('day-photo', 'propose_day.jpg', 'assets/propose_day.png');
+    </script>
+</body>
+
+</html>
