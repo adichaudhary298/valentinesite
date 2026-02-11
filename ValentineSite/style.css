@@ -1,0 +1,79 @@
+:root {
+  --color-bg: #ffe6e6; /* Light pink background */
+  --color-text: #ff4d6d; /* Darker pink for text */
+  --color-btn-yes: #ff4d6d;
+  --color-btn-yes-hover: #ff1a4d;
+  --color-btn-no: #ffffff;
+  --color-btn-no-border: #ff4d6d;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-bg);
+  margin: 0;
+  font-family: 'Indie Flower', cursive, sans-serif;
+  overflow: hidden; /* Prevent scrolling if button moves too far */
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure content is above confetti */
+}
+
+.header_text {
+  font-size: 50px;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.gif_container img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Indie Flower', cursive, sans-serif;
+}
+
+#yesButton {
+  background-color: var(--color-btn-yes);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#yesButton:hover {
+  background-color: var(--color-btn-yes-hover);
+  transform: scale(1.05);
+}
+
+#noButton {
+  background-color: var(--color-btn-no);
+  color: var(--color-text);
+  border: 2px solid var(--color-btn-no-border);
+}
+
+#noButton:hover {
+  background-color: #ffe6e6;
+}
